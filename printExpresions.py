@@ -12,3 +12,7 @@ print("Driving in my car right after a beer")
 print("Hey that bump is shaped like a deer")
 print("DUI? How about you die?")
 print("I'll go a hundred miles an hour")
+
+print()
+print(200 + 400)
+print("Good moring," + " my name is Joel.")
