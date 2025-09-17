@@ -18,3 +18,5 @@ myAge = myInt
 print("My age is: ", myAge)
 
 print(myFloat)
+myFloat = 6.28210
+print(myFloat)
