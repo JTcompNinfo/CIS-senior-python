@@ -20,3 +20,14 @@ print("My age is: ", myAge)
 print(myFloat)
 myFloat = 6.28210
 print(myFloat)
+
+print("\n\n\n")
+print("My Ticket App")
+print("-------------")
+ticketTotal = 43.50 + 43.50 +43.50
+processFee = 2.95
+venueFee = 3.95 + 3.95 + 3.95
+
+print("\nMy Subtotal is:")
+print("-----------------")
+print("$", ticketTotal + processFee + venueFee)
