@@ -13,7 +13,7 @@ duration = "week"
 
 activites = "go to dimond beach and watch the sunset"
 
-companions = " my boyfreind"
+companions = " my boyfriend"
 
 print("I would like to go to", location, "for vacation with " + companions + ".")
 print("I would visit for a " + duration + " and it would cost $" + cost + ".")
