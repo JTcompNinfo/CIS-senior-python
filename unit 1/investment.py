@@ -18,18 +18,21 @@ Compute an Investent amount
 4. The ending investment and interest paid in total are also displayed
 '''
 #Accept the inputs
-startInvest = float(print("How much was your starting Investmeant: "))
-yearsInvest = int(print("How many years has this lasted: "))
-intrestRate = int(print("What is the intrest rate as a whole number: "))
+startInvest = float(input("How much was your starting Investmeant: "))
+yearsInvest = int(input("How many years has this lasted: "))
+intrestRate = int(input("What is the intrest rate as a whole number: "))
 
-
-#converst the intrest rate to a decimal number
-
+# make the rate into a decmiale
 intrestRate = intrestRate / 100
 
-# Intitalize the accimulator for the intresttable
+#set total to work with
+investforYear = startInvest
 
-intrest = 
-
-finallTotal = amoutGained + startInvest
-# Compute and display the results
+# start loop
+loop = 0
+print("you start with $" + str(startInvest))
+while loop < yearsInvest:
+    loop = loop + 1
+    #calculate the new total
+    investforYear = (investforYear * intrestRate) + investforYear
+    print("In year", loop, "you have $" + str(investforYear))
