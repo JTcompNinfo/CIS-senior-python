@@ -28,7 +28,7 @@ dailyExercise = (weeklyExercise * 60) / 7
 
 print()
 print("=" * 40)
-print("\t\tFITNESS REPORT FOR", name.upper())
+print("\tFITNESS REPORT FOR", name.upper())
 print("=" * 40)
 
 print("\nPersonal Infromation:")
