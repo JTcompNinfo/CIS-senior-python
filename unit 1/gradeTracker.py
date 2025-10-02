@@ -16,7 +16,7 @@ print("You will enter grades for", numStu, "students")
 print("-" *40)
 
 print("\nEnter student data")
-
+# list
 names = []
 numScores =[]
 letScore = []
@@ -42,13 +42,15 @@ for times in range (1, numStu + 1):
         letter = "F"
     
     letScore.append(letter)
-
+# get class total
 classTotal = 0
 for numbers in range(1, numStu + 1):
     classTotal += numScores[numbers - 1]
     
+    
+# get class avrage
 classAvg = classTotal / numStu
-
+# see who passes
 passing = []
 passTimes = 0
 
@@ -60,14 +62,12 @@ for see in range(0, numStu):
         didit = False
     passing.append(didit)
 
-
+#See how many of each grade
 gradeA = 0
 gradeB = 0
 gradeC = 0
 gradeD = 0
 gradeF = 0
-
-
 for loop in range(0, numStu):
     if letScore[loop] == "A":
         gradeA += 1
@@ -79,7 +79,11 @@ for loop in range(0, numStu):
         gradeD += 1
     elif letScore[loop] == "F":
         gradeF += 1
+        
+#find passing oercent
 passPecent = passTimes / numStu * 100
+
+#Class summary output
 print("Class Summary")
 print('\tTotal Students:', numStu)
 print('\tTotal Points:', classTotal)
@@ -98,6 +102,8 @@ print("\tGrade C:", gradeC)
 print("\tGrade D:", gradeD)
 print("\tGrade F:", gradeF)
 
+
+# see if student is above or below average
 gradOkay = []
 
 for avrage in range(0, numStu):
@@ -109,5 +115,7 @@ for avrage in range(0, numStu):
     
 print("\n\nIndivdual Scores")
 
+
+#individual assements
 for last in range (0, numStu):
     print(names[last] + ": " + str(numScores[last]) + " (" + str(letScore[last]) + ") - " + gradOkay[last])
