@@ -10,54 +10,71 @@ print("  WELCOME TO THE LUCKY NUMBER GUESSING GAME!")
 print("=" * 50)
 print()
 
-# Main game loop - play multiple rounds
-# TODO: Use while True loop with break statement here
-
-# Generate random lucky number
-# TODO: Use random.randint() to generate number between 1 and 50
-
-# Set maximum attempts
-# TODO: Set max_attempts to 7
-
-# Initialize attempt counter
-# TODO: Create attempts variable starting at 0
-
-print(f"\nRound {total_rounds + 1}")
-print("I'm thinking of a lucky number between 1 and 50...")
-print(f"You have {max_attempts} attempts to guess it!")
-print()
-
-# Guessing loop - count-controlled while loop
-# TODO: Use while loop that continues while attempts < max_attempts
-
-    # Get user's guess
-    # TODO: Get input and convert to integer
+# Start game
+while True:
     
-    # Increment attempt counter
-    # TODO: Add 1 to attempts
+    # Get the random number
+    luckyNum = random.randint(1,50)
     
-    # Check if guess is correct
-    # TODO: Compare guess to lucky_number
+    # Set round values
+    max_attempts = 7
     
-        # Player wins!
-        # TODO: Display success message
-        # TODO: Update statistics
-        # TODO: Break out of guessing loop
+    attemps = 0
+    
+    total_rounds += 1
+    
+    result = ""
+    
+    # Inital instructions
+    print(f"\nRound", total_rounds)
+    print("I'm thinking of a lucky number between 1 and 50...")
+    print(f"You have", max_attempts, "attempts to guess it!")
+    print()
+    
+    
+    # Guessing loo-
+    while attemps < max_attempts:
+        #Total guesses left
+        print("Number of attemps: " + str(attemps) +"/7")
+        #add attemp by 1 and total guesses by 1
+        attemps+=1
+        total_guesses+=1
+        #user input
+        num = int(input("Enter a number between 1 and 50: "))
+        #Win condition
+        if num == luckyNum:
+            print("You guessed right!")
+            total_wins += 1
+            result = "Win"
+            break
         
-    # Provide hints
-    # TODO: Tell user if guess is too high or too low
+        #Hints
+        if num >  luckyNum:
+            print("Too big")
+        elif num < luckyNum:
+            print("Too small")
+        print()
+        
+        
+    #if you lose 
+    if result != "Win":
+        print("You lose!")
+        result = "Lost"
+        
+        
+    #round stats
+    print("\nYou", result, "with " + str(attemps) +"/7 attemps\n")
     
-# If loop completes without break, player lost
-# TODO: Handle case where player runs out of attempts
-
-# Display round statistics
-# TODO: Show attempts used, win/loss for this round
-
-# Ask if player wants to play again
-# TODO: Get input and check if user wants to continue
-# TODO: Use break statement to exit main game loop if done
-
-# Display final statistics
-# TODO: Show total rounds, wins, and average guesses per round
-
+    #see if user wants to play again
+    again = input("Do you want to play again? Type 'No' To stop. ").lower()
+    
+    
+    if again == "no":
+        break
+   
+# final stats
+print("\n\n") 
+print("Total wins:", total_wins)
+print("Total guesses:", total_guesses)
+print("Total rounds:", total_rounds)
 print("\nThanks for playing! Goodbye!")
