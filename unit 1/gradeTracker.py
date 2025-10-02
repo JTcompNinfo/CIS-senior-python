@@ -110,4 +110,4 @@ for avrage in range(0, numStu):
 print("\n\nIndivdual Scores")
 
 for last in range (0, numStu):
-    print(names[last] + ": " + numScores[last] + " (" + letScore[last] + ") - " + gradOkay[last])
+    print(names[last] + ": " + str(numScores[last]) + " (" + str(letScore[last]) + ") - " + gradOkay[last])
