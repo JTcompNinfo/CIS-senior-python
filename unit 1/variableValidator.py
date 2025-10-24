@@ -56,3 +56,6 @@ while True:
 if passing:
     print("'" + variable_name + "' is a vaid variable name.")
 # Check each rule and provide appropriate feedback
+
+if (for loop in range(0, 10):
+    )
