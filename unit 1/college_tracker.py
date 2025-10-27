@@ -8,7 +8,7 @@ MAX_IDEAL_DISTANCE = 500
 
 # Welcome message
 print("=" * 70)
-print("🎓 COLLEGE COLLEGE APPLICA APPLICATION TION TRACKER TRACKER 🎓")
+print("🎓 COLLEGE APPLICATION TRACKER 🎓")
 print("=" * 70)
 # Your welcome code here
 
@@ -50,7 +50,12 @@ for meep in range(0,3):
         classifaction.append("Match")
     else:
         classifaction.append("Reach")
+        
+avrage = sum(anual_tuition) / 3
 
+avrageD = sum(distance) / 3
+
+avrageR = sum(acceptance_rate) / 3
 
 # Summary report with f-strings
 # Your code here
@@ -66,3 +71,22 @@ for times in range(0,3):
 print("=" * 70)
 print("💰 FINANCIAL ANALYSIS")
 print("=" * 70)
+
+print("\nTotal Application Fees:", (APPLICATION_FEE * 3))
+print("Average Annual Tuition: $%0.2f" % avrage)
+print("Total 4-Year Tuition (All Schools):", sum(anual_tuition))
+
+print("\n")
+
+print("=" * 70)
+print("🚗 DISTANCE & TRAVEL ANALYSIS")
+print("=" * 70)
+print("Average Distance: %0.2f" % avrageD)
+print("Total Distance (visiting all, round trips):", (sum(distance) * 2))
+
+print("=" * 70)
+print("📈ACCEPTANCE RATE ANALYSIS")
+print("=" * 70)
+
+print("Your Average Acceptance Rate: %0.2f" % avrageR)
+print("National Average:", AVG_ACCEPTANCE_RATE)
