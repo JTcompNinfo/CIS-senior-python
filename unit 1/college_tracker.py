@@ -30,6 +30,10 @@ anual_tuition = []
 distance = []
 acceptance_rate = []
 
+print("=" * 70)
+print("📊YOUR COLLEGE APPLICATION SUMMARYY")
+print("=" * 70)
+
 for count in range(1,4):
     print("---College #" + str(count) + "---")
     college_name.append(input("College name: "))
