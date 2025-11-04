@@ -81,22 +81,28 @@ print(f"\n{student1['name']}'s average grade: {average:.2f}")
 
 # Part 4: using dictinary methods
 
-#
+# print all keys
 print("\nAll values in the dictinary")
+print(student1.keys())
 
 
 
-#
+#pirnt all key values
 print("\nAll the key-value pairs")
+print(student1.items())
 
 
 
-#
-phone = 
+# safely get phone number
+phone = student1.get("phone_number")
 print("\nPhone number:", phone)
 
 student2 = {
     "name": "Marcus Chen",
     "student_id": "S12346"
 }
+#grade level 11, math 87, scince 90, english 85
+student2.update({"grade": 11,"math_grade": 87, "scince_grade": 90,  "english_grade": 85})
 
+print("\nNew student record")
+print(student2)
